@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "122832387388",
+    "firebase_url": "https://kp-private-schools-authority.firebaseio.com",
+    "project_id": "kp-private-schools-authority",
+    "storage_bucket": "kp-private-schools-authority.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:122832387388:android:e7eadb7c9c0942c9",
+        "android_client_info": {
+          "package_name": "com.psra.complaintsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "122832387388-av492m4n589e2bnat6p4o2f5bqmpdk6k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpeOQUpFicr71AXQwAbtstyvYRNklUnUI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

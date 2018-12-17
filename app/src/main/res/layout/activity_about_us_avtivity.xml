@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/img"
+    tools:context="com.psra.complaintsystem.activities.AboutUsAvtivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent"
+        android:elevation="4dp"
+        app:popupTheme="@style/Widget.AppCompat.ActionBar.TabBar"
+        app:theme="@style/mytheme"
+        app:titleTextColor="@color/white" />
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="14dp"
+    >
+    <TextView
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Khyber Pakhtunkhwa government \n has established a Private School \n Regulatory Authority to discipline\n private educational institutions."
+
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Authority will ensure implementation of government policies in private educational institutions besides determining their fees."
+
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        />
+
+
+    <TextView
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The management of all private schools including Montessori, Kindergarten, tuition academy or centre, primary, middle, high, higher secondary schools or an institution of equivalent level imparting education through any system of education or medium of instruction in private sector are directed to ensure strict compliance to the regulations setup by PSRA. "
+
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="12dp"
+    >
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:text="Contact Us"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        android:onClick="sendnextActivity"
+        />
+</LinearLayout>
+
+
+</LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+</LinearLayout>

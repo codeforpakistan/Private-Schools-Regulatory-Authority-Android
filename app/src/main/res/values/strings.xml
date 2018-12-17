@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PSRA</string>
+    <string name="selectGender">Select Gender</string>
+    <string name="internal_storage">internal storage</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="internet_error">Network connected</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Webview</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_contact">Contact us</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

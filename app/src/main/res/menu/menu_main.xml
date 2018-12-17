@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/about_us"
+        android:orderInCategory="300"
+        android:title="About us"
+
+        ></item>
+    <item
+        android:id="@+id/update"
+        android:orderInCategory="300"
+        android:title="Update Profile"></item>
+
+    <item
+        android:id="@+id/logout"
+        android:orderInCategory="300"
+        android:title="Logout"
+
+        ></item>
+</menu>

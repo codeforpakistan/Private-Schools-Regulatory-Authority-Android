@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.psra.complaintsystem.activities.UserProfile">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent"
+        android:elevation="4dp"
+        app:popupTheme="@style/Widget.AppCompat.ActionBar.TabBar"
+        app:theme="@style/mytheme"
+        app:titleTextColor="@color/white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_toolbar"
+        android:background="@drawable/bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo" />
+           <!-- <TextView
+                android:id="@+id/splash_descip1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo"
+                android:layout_marginTop="10dp"
+                android:text="Private Schools Regulatory Autority"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/logo"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:lineSpacingExtra="8dp"/>
+            <TextView
+                android:id="@+id/splash_descip2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo"
+                android:layout_marginTop="4dp"
+                android:text="Khyper Pakhtunkhwa"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/splash_descip1"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:lineSpacingExtra="8dp"/>-->
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="180dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="16dp"
+        app:cardUseCompatPadding="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Update Profile"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="Name"
+                        android:textSize="12sp"
+                        android:paddingLeft="8dp"
+                        android:paddingBottom="8dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/greencolor"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="8dp"
+                        android:textColor="@color/greencolor"
+                        android:text="نام"
+                        android:textSize="12dp"
+                        android:gravity="center_vertical"
+                        />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="8dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/etshape"
+                    android:ems="10"
+                    android:hint="Update your Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textSize="14sp" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="Contact Number"
+                        android:textSize="12sp"
+                        android:paddingLeft="8dp"
+                        android:paddingBottom="8dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/greencolor"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="8dp"
+                        android:textColor="@color/greencolor"
+                        android:text="رابطہ نمبر"
+                        android:textSize="12dp"
+                        android:gravity="center_vertical"
+                        />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="8dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/etshape"
+                    android:ems="10"
+                    android:imeOptions="actionNext"
+                    android:hint="Update your Contact Number"
+                    android:maxLines="1"
+                    android:maxLength="11"
+                    android:inputType="number"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textSize="14sp" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="Address"
+                        android:textSize="12sp"
+                        android:paddingLeft="8dp"
+                        android:paddingBottom="8dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/greencolor"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="8dp"
+                        android:textColor="@color/greencolor"
+                        android:text="گھر کا پتہ"
+                        android:textSize="12dp"
+                        android:gravity="center_vertical"
+                        />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="8dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/etshape"
+                    android:ems="10"
+                    android:hint="Update your Address"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textSize="14sp" />
+
+                <!--     <EditText
+                         android:id="@+id/et_gender"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:hint="Gender"
+                         android:imeOptions="actionNext"
+                         android:inputType="text"
+                         android:nextFocusUp="@id/et_password"
+                         android:textColor="@android:color/black"
+                         android:textColorHint="@android:color/darker_gray" />-->
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="Password"
+                        android:textSize="12sp"
+                        android:paddingLeft="8dp"
+                        android:paddingBottom="8dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/greencolor"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="8dp"
+                        android:textColor="@color/greencolor"
+                        android:text="پاس ورڈ"
+                        android:textSize="12dp"
+                        android:gravity="center_vertical"
+                        />
+                </LinearLayout>
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="8dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/etshape"
+                    android:ems="10"
+                    android:hint="Update your Password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:text="update"
+                    android:textColor="@color/white"
+                    android:background="@color/colorPrimaryDark"
+                    android:gravity="center"
+                    android:onClick="upData" />
+            </LinearLayout>
+        </ScrollView>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

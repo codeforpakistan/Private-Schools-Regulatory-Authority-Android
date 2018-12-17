@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img"
+    tools:context="com.psra.complaintsystem.activities.Splashscreen">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:src="@drawable/logo"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerInside"/>
+
+    <TextView
+        android:id="@+id/splash_descip1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_marginTop="20dp"
+        android:text="COMPLAINT SYSTEM"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/logo"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:lineSpacingExtra="8dp"/>
+    <View
+        android:layout_width="120dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="33dp"
+        android:layout_below="@+id/splash_descip1"
+        android:background="@android:color/white"/>
+    <TextView
+        android:id="@+id/splash_descip2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_marginTop="4dp"
+        android:text="for"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/splash_descip1"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:lineSpacingExtra="8dp"/>
+    <View
+        android:layout_width="120dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignRight="@+id/splash_descip2"
+        android:layout_marginLeft="33dp"
+        android:layout_marginRight="33dp"
+        android:layout_below="@+id/splash_descip1"
+        android:background="@android:color/white"/>
+    <TextView
+        android:id="@+id/otherde"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_marginTop="15dp"
+        android:text="Private Schools Regulatory"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_below="@+id/splash_descip2"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:lineSpacingExtra="8dp"/>
+
+<!--
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="anima.json"
+        app:lottie_loop="true"
+        android:layout_above="@id/bottomtext"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true" />
+-->
+
+    <TextView
+        android:id="@+id/bottomtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/otherde"
+        android:textColor="@color/white"
+        android:text="Authority"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/bottomtext2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bottomtext"
+        android:textColor="@color/white"
+        android:text="Khyber Pakhtunkhwa"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        />
+    <TextView
+        android:id="@+id/footer_text"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:text="Powered by KPITB"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+       />
+
+
+
+</RelativeLayout>
