@@ -12,6 +12,8 @@ import java.util.List;
 public class DemoLogin {
 
     @Json(name = "success")
+
+    //these are test comments
     private Integer success;
     @Json(name = "Message")
     private String message;
