@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="260dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:id="@+id/dialogopen"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
+    android:background="@drawable/custom_card"
+    android:orientation="vertical"
+    >
+
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:background="#43a047"
+        android:textColor="@color/white"
+        android:text="Forget Password"
+        android:textSize="16sp"
+        android:paddingLeft="10dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dialog_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textSize="13sp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:text=" To receive your password, Enter your CNIC and Check your email address." />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/edt_linear">
+
+        <EditText
+            android:id="@+id/forget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter CNIC"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:textColorHint="#999"
+            android:background="@null"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_fgps"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_height="40dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/greenshape"
+        android:textColor="@color/white"
+        android:text="Submit"/>
+
+
+
+
+</LinearLayout>

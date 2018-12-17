@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#005e34</color>
+    <color name="colorPrimaryDark">#005e34</color>
+    <color name="colorAccent">#005e34</color>
+    <color name="greencolor">#005e34</color>
+    <color name="showdo">#CABBBBBB</color>
+    <color name="grey">#c2c7d2</color>
+    <color name="graycl">#F0F0F0</color>
+    <color name="txblue">#4b96f3</color>
+   <color name="txred">#ea4335</color>
+    <color name="txgreen">#049053</color>
+    <color name="blue">#134d72</color>
+
+     <color name="recieved">#0197ce</color>
+     <color name="all">#eca81f</color>
+     <color name="resolved">#0d9b46</color>
+     <color name="summon">#de1212</color>
+     <color name="purple">#aa66cc</color>
+</resources>
+

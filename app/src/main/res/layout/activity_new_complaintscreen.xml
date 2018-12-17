@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/graycl"
+    tools:context="com.psra.complaintsystem.activities.NewComplaintscreen">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent"
+        android:elevation="4dp"
+        app:popupTheme="@style/Widget.AppCompat.ActionBar.TabBar"
+        app:theme="@style/mytheme"
+        app:titleTextColor="@color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:scrollbars="none"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="16dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="District"
+                    android:textSize="12sp"
+                    android:paddingLeft="8dp"
+                    android:paddingBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/greencolor"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/greencolor"
+                    android:text="ضلع"
+                    android:textSize="12dp"
+                    android:gravity="center_vertical"
+                    />
+            </LinearLayout>
+
+        <!--    <android.support.v7.widget.CardView
+                android:id="@+id/card_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shape"
+                app:cardBackgroundColor="@color/white"
+                >-->
+
+                <EditText
+                    android:id="@+id/complaint_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="8dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/etshape"
+                    android:drawableRight="@drawable/ic_arrow_icon"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint="Select District"
+                    android:inputType="none"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textSize="14sp"
+                    />
+          <!--  </android.support.v7.widget.CardView>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Tehsil"
+                    android:textSize="12sp"
+                    android:paddingLeft="8dp"
+                    android:paddingBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/greencolor"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="تحصیل"
+                    android:textSize="12sp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/greencolor"
+
+                    />
+            </LinearLayout>
+
+                <EditText
+                    android:id="@+id/sub_complaint_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawableRight="@drawable/ic_arrow_icon"
+                    android:ems="10"
+                    android:layout_gravity="center"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:background="@drawable/etshape"
+                    android:focusable="false"
+                    android:hint="Select Tehsil"
+                    android:inputType="none"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Union Council"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/greencolor"
+                    android:textSize="12sp"
+                    android:paddingLeft="8dp"
+                    android:paddingBottom="8dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="یونین کونسل"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/greencolor"
+                    android:textSize="12sp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp"
+                    />
+            </LinearLayout>
+
+
+
+                <EditText
+                    android:id="@+id/uc_complaint_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/etshape"
+                    android:drawableRight="@drawable/ic_arrow_icon"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint="Select Union Council"
+                    android:inputType="none"
+                    android:layout_gravity="center"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textSize="14sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                android:weightSum="1"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="complaint against"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/greencolor"
+                    android:textSize="12sp"
+                    android:paddingLeft="8dp"
+                    android:paddingBottom="8dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="ادارے کا نام"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/greencolor"
+                    android:textSize="12sp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp"
+                    />
+
+            </LinearLayout>
+
+                <EditText
+                    android:id="@+id/school_complaint_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/etshape"
+                    android:drawableRight="@drawable/ic_arrow_icon"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint="Select School"
+                    android:inputType="none"
+                    android:singleLine="true"
+                    android:layout_gravity="center"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_school_address"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:paddingTop="5dp"
+                android:background="@drawable/etshape"
+                android:imeOptions="actionNext"
+                android:textSize="14dp"
+                android:paddingLeft="8dp"
+                android:visibility="gone"
+                android:scrollbars="vertical"
+                android:hint="Enter School Name"
+                android:textColor="@android:color/black" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:weightSum="1"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="complaint type"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/greencolor"
+                    android:textSize="12sp"
+                    android:paddingLeft="8dp"
+                    android:paddingBottom="8dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="شکایت کی قسم"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/greencolor"
+                    android:textSize="12sp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp"
+
+
+                    />
+
+            </LinearLayout>
+
+                <EditText
+                    android:id="@+id/types_complaint_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/etshape"
+                    android:drawableRight="@drawable/ic_arrow_icon"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint="Select Complaint Type"
+                    android:inputType="none"
+                    android:layout_gravity="center"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:weightSum="1"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="School Address"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/greencolor"
+                    android:textSize="12sp"
+                    android:paddingLeft="8dp"
+                    android:paddingBottom="8dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text=" اسکول کا پتہ"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/greencolor"
+                    android:textSize="12sp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp"
+
+                    />
+
+            </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/et_institute_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingTop="5dp"
+                    android:background="@drawable/etshape"
+                    android:imeOptions="actionNext"
+                    android:textSize="14dp"
+                    android:paddingLeft="8dp"
+                    android:scrollbars="vertical"
+                    android:textColor="@android:color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:weightSum="1"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Complaint detail"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/greencolor"
+                    android:textSize="12sp"
+                    android:paddingLeft="8dp"
+                    android:paddingBottom="8dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text=" شکایت کی تفصیل"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/greencolor"
+                    android:textSize="12sp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp"
+
+                    />
+
+            </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_complaint_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:paddingTop="5dp"
+                    android:background="@drawable/etshape"
+                    android:imeOptions="actionDone"
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp"
+                    android:paddingLeft="8dp"
+                    android:scrollbars="vertical"
+                    />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:weightSum="1"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Add photos"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/greencolor"
+                    android:textSize="12sp"
+                    android:paddingLeft="8dp"
+                    android:paddingBottom="8dp"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text=" تصاویر شامل کریں"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/greencolor"
+                    android:textSize="12sp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp"
+                    />
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="5dp"
+                app:cardBackgroundColor="@color/white"
+                android:background="@drawable/shape">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                   >
+
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/imageView5"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_weight="1.2"
+                      />
+
+
+                    <Button
+                        android:id="@+id/pick_submit"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/imagebutton"
+                        android:onClick="pickImage"
+                        />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <com.dd.processbutton.iml.ActionProcessButton
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/greencolor"
+                android:onClick="submit"
+                android:text="Submit"
+                android:enabled="true"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                custom:pb_colorComplete="@color/graycl"
+                custom:pb_colorNormal="@color/greencolor"
+                custom:pb_colorPressed="@color/blue_pressed"
+                custom:pb_colorProgress="@color/holo_orange_light"
+                custom:pb_textComplete="Success"
+                custom:pb_textProgress="Submitting..."
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
+

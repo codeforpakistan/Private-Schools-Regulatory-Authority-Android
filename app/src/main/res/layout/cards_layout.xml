@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="2dp"
+        app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relative"
+        android:layout_marginRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/top_text"
+            android:visibility="visible"
+            android:layout_toRightOf="@+id/view_second"
+            android:layout_marginLeft="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type:"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/greencolor"/>
+
+            <TextView
+                android:id="@+id/textStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Teachind Non Teaching staff salary"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/greencolor"/>
+
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_toRightOf="@+id/date_lay"
+            android:layout_width="190dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="35dp"
+            android:background="@color/grey"
+            android:layout_height="1dp"
+            />
+
+
+        <View
+            android:id="@+id/rel"
+            android:layout_width="4dp"
+            android:background="@color/grey"
+            android:layout_height="match_parent"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/date_lay"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp">
+//////////////////////////////////////////////////////////////
+            <TextView
+                android:id="@+id/datetime"
+                android:layout_width="60dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:text="20 Aug 2018"
+                android:maxLines="3"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_toRightOf="@+id/date_lay"
+            android:layout_width="1dp"
+            android:id="@+id/view_second"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/graycl"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/view_second"
+            android:layout_below="@+id/top_text"
+            android:id="@+id/type_rel"
+            android:paddingLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:paddingRight="10dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/detailtv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet, odio tota nec et. Eos populo eirmod nonumes et."
+                    android:textSize="10sp"
+                    android:maxLines="2"
+                    android:textColor="@color/grey"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+      <!--  <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/next_btn"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"/>-->
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+           android:layout_below="@+id/type_rel"
+           android:layout_toRightOf="@+id/view_second"
+           android:orientation="horizontal"
+           android:paddingLeft="20dp"
+          >
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Status:"
+               android:id="@+id/status"
+               android:gravity="right"
+               android:layout_marginTop="10dp"
+               android:textColor="@color/grey"
+               android:textSize="12sp"
+               android:paddingRight="8dp"
+               android:layout_marginRight="8dp"
+               />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="solved"
+               android:layout_marginTop="10dp"
+               android:textSize="12sp"
+               android:id="@+id/CatStatus"
+               android:layout_marginRight="10dp"
+               android:gravity="center_vertical"
+               android:textAlignment="center"
+               android:textColor="@color/white"
+               android:background="@drawable/custom_status_bg"
+               android:paddingLeft="8dp"
+               android:paddingRight="8dp"
+               android:paddingBottom="5dp"
+               android:paddingTop="5dp"/>
+
+       </LinearLayout>
+
+
+    </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
+
+    <!-- <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               >
+               <ImageView
+                   android:id="@+id/imageView"
+                   android:tag="image_tag"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:layout_weight="1"
+                   android:src="@mipmap/ic_launcher"/>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="12dp"
+                   android:layout_weight="2"
+                   android:orientation="vertical"
+                   >
+
+                   <TextView
+                       android:id="@+id/textcomplaintTitle"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_marginTop="10dp"
+                       android:text="Complaint Title"
+                       android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+                   <TextView
+                       android:id="@+id/textStatus"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_marginTop="10dp"
+                       android:text="cat"
+                       android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                   <TextView
+                       android:id="@+id/CatStatus"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_marginTop="10dp"
+                       android:text="Status"
+                       android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+               </LinearLayout>
+           </LinearLayout>-->

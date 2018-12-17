@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.psra.complaintsystem.activities.NotificaionFragment">
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiprc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/my_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:fadeScrollbars="true"
+            />
+   </android.support.v4.widget.SwipeRefreshLayout>
+    <ImageView
+        android:id="@+id/seize_history_img"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/no_record2"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>
