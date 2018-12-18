@@ -338,7 +338,6 @@ public class UserRegisterscreen extends AppCompatActivity implements ProgressGen
         map.put("userEmail", data_email);
         map.put("cnic", data_cnic);
         map.put("contactNumber", data_phonenumber);
-
         map.put("address", data_address);
         map.put("gender", String.valueOf(intgender));
         map.put("token_key", api_token);

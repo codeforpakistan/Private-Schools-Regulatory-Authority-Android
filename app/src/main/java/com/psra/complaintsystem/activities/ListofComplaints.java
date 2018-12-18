@@ -221,8 +221,7 @@ public class ListofComplaints extends AppCompatActivity {
                 intent.putExtra("complaintDetail",complaintDetail);
 
                 startActivity(intent);
-
-                Toast.makeText(getApplicationContext(), position + " is selected!" + complaintagainst, Toast.LENGTH_SHORT).show();
+                
             }
 
             @Override

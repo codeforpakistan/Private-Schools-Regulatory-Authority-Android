@@ -16,7 +16,8 @@ public class ComplainData {
     @PrimaryKey(autoGenerate = false)
     @Json(name = "notificationId")
     private Integer notificationId;
-
+    @Json(name = "user_id")
+    private Integer user_id;
     @Json(name = "complain_id")
     private String complainId;
     @Json(name = "complainTypeTitle")
@@ -28,20 +29,25 @@ public class ComplainData {
     @Json(name = "date")
     private String date;
 
-    public ComplainData(String complainId, String statusTitle, String complainTypeTitle, String date, String complainDetail,Integer notificationId) {
+    public ComplainData(String complainId, String statusTitle, String complainTypeTitle, String date, String complainDetail,Integer notificationId, Integer user_id) {
         this.complainId = complainId;
         this.statusTitle = statusTitle;
         this.complainTypeTitle = complainTypeTitle;
         this.date = date;
         this.complainDetail = complainDetail;
         this.notificationId = notificationId;
+        this.user_id = user_id;
 
     }
 
 
+    public Integer getUser_id() {
+        return user_id;
+    }
 
-
-
+    public void setUser_id(Integer user_id) {
+        this.user_id = user_id;
+    }
 
     public String getComplainId() {
         return complainId;
@@ -95,6 +101,7 @@ public class ComplainData {
     public String toString() {
         return "ComplainData{" +
                 "notificationId=" + notificationId +
+                ", user_id=" + user_id +
                 ", complainId='" + complainId + '\'' +
                 ", complainTypeTitle='" + complainTypeTitle + '\'' +
                 ", complainDetail='" + complainDetail + '\'' +

@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -158,10 +159,20 @@ public class NewComplaintscreen extends AppCompatActivity implements EasyPermiss
 
 
         schoolAddress = findViewById(R.id.et_institute_address);
+        schoolAddress.setFocusableInTouchMode(false);
+        schoolAddress.setFocusable(false);
+        schoolAddress.setFocusableInTouchMode(true);
+        schoolAddress.setFocusable(true);
+
         complaintDetail = findViewById(R.id.et_complaint_detail);
+        complaintDetail.setFocusableInTouchMode(false);
+        complaintDetail.setFocusable(false);
+        complaintDetail.setFocusableInTouchMode(true);
+        complaintDetail.setFocusable(true);
+
         callsRest = new CallsRest();
         mTopToolbar = findViewById(R.id.my_toolbar);
-        mTopToolbar.setTitle("Register Complaints");
+        mTopToolbar.setTitle("Register Complaint");
         setSupportActionBar(mTopToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mTopToolbar.setNavigationOnClickListener(arrow -> onBackPressed());
@@ -182,7 +193,7 @@ public class NewComplaintscreen extends AppCompatActivity implements EasyPermiss
         // loadAllCategories();
 
         dialog = new ProgressDialog(this);
-        dialog.setMessage("please wait.");
+        dialog.setMessage("Fetching data...");
         setUI();
         loadAllComTypeListDistlist();
 
@@ -304,7 +315,7 @@ public class NewComplaintscreen extends AppCompatActivity implements EasyPermiss
     private void openCamera() {
         String[] perms = {Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE};
         if (EasyPermissions.hasPermissions(this, perms)) {
-            Toast.makeText(this, "Opening camera", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Opening camera", Toast.LENGTH_SHORT).show();
             alertDialog.dismiss();
             Intent takePictureIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
 
@@ -401,7 +412,7 @@ public class NewComplaintscreen extends AppCompatActivity implements EasyPermiss
                     //imageView.setImageBitmap(selectedImage);
                     //imageView.setImageURI(FileUtils.getUri(original_file));
                 } catch (FileNotFoundException e) {
-                    Toast.makeText(this, "Some thing went wrong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Failed to get image!", Toast.LENGTH_SHORT).show();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -643,9 +654,19 @@ public class NewComplaintscreen extends AppCompatActivity implements EasyPermiss
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                Toast.makeText(NewComplaintscreen.this, "Complaint Registered", Toast.LENGTH_SHORT).show();
+                                new AlertDialog.Builder(NewComplaintscreen.this)
+                                        .setTitle("Success")
+                                        .setMessage("Complaint Registered")
+                                        .setPositiveButton("OK", new DialogInterface.OnClickListener()
+                                        {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                finish();                                            }
+
+                                        })
+                                        .show();
                                 // submitbt.setEnabled(false);
-                                finish();
+
                             }
                         });
 
@@ -668,7 +689,9 @@ public class NewComplaintscreen extends AppCompatActivity implements EasyPermiss
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(NewComplaintscreen.this, "failed to upload", Toast.LENGTH_SHORT).show();
+                        snackbar = Snackbar
+                                .make(linerLayout, "Unable to register complaint", Snackbar.LENGTH_LONG);
+                        snackbar.show();
                     }
                 });
 
@@ -731,7 +754,7 @@ public class NewComplaintscreen extends AppCompatActivity implements EasyPermiss
     private void openGallery() {
         String[] perms = {Manifest.permission.READ_EXTERNAL_STORAGE};
         if (EasyPermissions.hasPermissions(this, perms)) {
-            Toast.makeText(this, "Opening Gallery", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Opening Gallery", Toast.LENGTH_SHORT).show();
             alertDialog.dismiss();
 
          /*   Intent galleryIntent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);

@@ -76,7 +76,6 @@ public class Splashscreen extends AppCompatActivity {
                     } else {
                         Intent intent = new Intent(Splashscreen.this, HomeScreen.class);
                         startActivity(intent);
-
                         finish();
                     }
                 } catch (InterruptedException e) {

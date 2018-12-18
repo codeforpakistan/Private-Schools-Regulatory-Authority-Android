@@ -15,7 +15,7 @@ public class AfterSplashScreen extends AppCompatActivity {
 
     public void dosomthing(View view) {
 
-        startActivity(new Intent(AfterSplashScreen.this,UserRegisterscreen.class));
+        startActivity(new Intent(AfterSplashScreen.this, UserRegisterscreen.class));
 
 
     }
@@ -23,7 +23,7 @@ public class AfterSplashScreen extends AppCompatActivity {
     public void godosomthing(View view) {
 
 
-        Intent intent = new Intent(AfterSplashScreen.this,LoginScreen.class);
+        Intent intent = new Intent(AfterSplashScreen.this, LoginScreen.class);
         startActivity(intent);
 
 

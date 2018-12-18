@@ -31,6 +31,7 @@ import com.awesomedialog.blennersilva.awesomedialoglibrary.AwesomeProgressDialog
 import com.awesomedialog.blennersilva.awesomedialoglibrary.interfaces.Closure;
 import com.crashlytics.android.Crashlytics;
 import com.google.firebase.iid.FirebaseInstanceId;
+
 import com.psra.complaintsystem.Utils.AppConfig;
 import com.psra.complaintsystem.modle.DemoLogin;
 import com.psra.complaintsystem.modle.ForgetPassword;
@@ -107,7 +108,7 @@ public class LoginScreen extends AppCompatActivity {
         chekc=hasNetworkAccess();
         if(chekc)
         {
-            Toast.makeText(this, "conntected to network", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "conntected to network", Toast.LENGTH_SHORT).show();
 
         }
         else {
@@ -265,14 +266,10 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onResponse(Call<DemoLogin> call, Response<DemoLogin> response) {
                 success = response.body().getSuccess();
-                Log.e("success", String.valueOf(success));
-                Log.e("response", response.toString());
-                Log.e("data", response.body().toString());
-                Log.e("Message", response.body().getSuccess().toString());
                 if (success == 1) {
+                    Log.e("data", response.body().toString());
                     mAwesomeProgressDialog.hide();
                     List<UserInfoList> l = response.body().getUserInfoList();
-                    Log.e("onResponse: ",l.get(0).getUserId());
                     for (UserInfoList s : l) {
                         loginEditor=loginSharedPreferences.edit();
                         loginEditor.putString("userTitle", s.getUserTitle());
@@ -305,6 +302,37 @@ public class LoginScreen extends AppCompatActivity {
                         }
                     }
                 } else if (success == 0) {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            new AwesomeErrorDialog(LoginScreen.this)
+                                    .setTitle("Whoops")
+                                    .setMessage("Cnic or Password is incorrect")
+                                    .setColoredCircle(com.psra.complaintsystem.R.color.dialogErrorBackgroundColor)
+                                    .setDialogIconAndColor(com.psra.complaintsystem.R.drawable.ic_dialog_error, com.psra.complaintsystem.R.color.white)
+                                    .setCancelable(false)
+
+                                    .setButtonBackgroundColor(com.psra.complaintsystem.R.color.dialogErrorBackgroundColor)
+                                    .setButtonText("Try Again")
+                                    .setErrorButtonClick(new Closure() {
+                                        @Override
+                                        public void exec() {
+                                            // click
+                                            runOnUiThread(new Runnable() {
+                                                @Override
+                                                public void run() {
+
+
+                                                }
+                                            });
+                                        }
+                                    })
+                                    .show();
+                        }
+                    });
+                    mAwesomeProgressDialog.hide();
+                }
+                else if (success == 2) {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
