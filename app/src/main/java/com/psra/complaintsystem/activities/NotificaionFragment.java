@@ -54,6 +54,9 @@ public class NotificaionFragment extends Fragment implements
     DatabaseRooom databaseRooom;
     SwipeRefreshLayout swipeRefreshLayout;
     ImageView no_record_layout;
+    String user_id;
+    int notifi_user_id;
+    SharedPreferences loginSharedPreferences;
 
     RecyclerItemTouchHelper recyclerItemTouchHelper;
     public NotificaionFragment() {
@@ -67,6 +70,8 @@ public class NotificaionFragment extends Fragment implements
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(com.psra.complaintsystem.R.layout.fragment_notificaion, container, false);
+        loginSharedPreferences = getActivity().getSharedPreferences("loginData",Context.MODE_PRIVATE);
+        user_id = loginSharedPreferences.getString("userId", "No Data");
         no_record_layout =view.findViewById(R.id.seize_history_img);
         databaseRooom = Room.databaseBuilder(getActivity(),
                 DatabaseRooom.class, DbConstants.DB_NAME).allowMainThreadQueries()
@@ -84,15 +89,25 @@ public class NotificaionFragment extends Fragment implements
 
         //no_record_layout.setVisibility(View.GONE);
 
+                data = databaseRooom.daoAccess().getAllNoficitions();
+        Log.e("db data", data.toString() );
+        if (data.size() > 0){
+            String notifi_user_id = String.valueOf(data.get(0).getUser_id());
+            Log.e("notifi_user_id", notifi_user_id );
+            Log.e("user_id", user_id );
+            if (user_id.equals(notifi_user_id)){
+                no_record_layout.setVisibility(View.GONE);
+                adapter = new OfflineAdpter(data);
+                recyclerView.setAdapter(adapter);
+                adapter.notifyDataSetChanged();
 
-                  data.clear();
-                data=databaseRooom.daoAccess().getAllNoficitions();
-                if(data.size() >0) {
-                    no_record_layout.setVisibility(View.GONE);
-                    adapter = new OfflineAdpter(data);
-                    recyclerView.setAdapter(adapter);
-                    adapter.notifyDataSetChanged();
-                }
+            }
+        }
+
+
+
+
+
 
         //adapter.setRefreshing(false);
         // Setup onItemTouchHandler to enable drag and drop , swipe left or right

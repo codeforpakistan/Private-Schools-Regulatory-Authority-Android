@@ -103,7 +103,7 @@ int success;
         chekc=hasNetworkAccess(this);
         if(chekc)
         {
-            Toast.makeText(this, "conntected to network", Toast.LENGTH_SHORT).show();
+           // Toast.makeText(this, "conntected to network", Toast.LENGTH_SHORT).show();
             //chekc=false;
         }
         else {

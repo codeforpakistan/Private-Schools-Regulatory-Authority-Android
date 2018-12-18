@@ -6,7 +6,7 @@ package com.psra.complaintsystem.Utils;
 
 public class AppConfig {
    // public static final String baseUrl = "http://psra.gkp.pk/dashboard/mobile_apis/";
-    public static final String baseUrl = "http://psra.gkp.pk/dashboard/mobile_apis/";
+    public static final String baseUrl = "https://psra.gkp.pk/dashboard/mobile_apis/";
 
 
 
