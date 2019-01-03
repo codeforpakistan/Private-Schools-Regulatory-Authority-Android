@@ -11,4 +11,11 @@
     <string name="title_contact">Contact us</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="notification_error_ssl_date_invalid">SSL data invalid</string>
+    <string name="notification_error_ssl_expired">SSL expired</string>
+    <string name="notification_error_ssl_idmismatch">SSL idmismatch</string>
+    <string name="notification_error_ssl_invalid">SSL invalid</string>
+    <string name="notification_error_ssl_not_yet_valid">SSL not yet valid</string>
+    <string name="notification_error_ssl_untrusted">SSL untrusted</string>
+    <string name="notification_error_ssl_cert_invalid">SSL cert invalid</string>
 </resources>
