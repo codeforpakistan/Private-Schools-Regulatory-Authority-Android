@@ -47,7 +47,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="District"
+                    android:text="District *"
                     android:textSize="12sp"
                     android:paddingLeft="8dp"
                     android:paddingBottom="8dp"
@@ -214,7 +214,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="Complaint Against"
+                    android:text="Complaint Against *"
                     android:gravity="center_vertical"
                     android:textColor="@color/greencolor"
                     android:textSize="12sp"
@@ -282,7 +282,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="Complaint Type"
+                    android:text="Complaint Type *"
                     android:gravity="center_vertical"
                     android:textColor="@color/greencolor"
                     android:textSize="12sp"
@@ -324,6 +324,21 @@
                     android:textColor="@android:color/black"
                     android:textColorHint="@android:color/darker_gray"
                     android:textSize="14sp" />
+            <EditText
+                android:id="@+id/et_complaint_other"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:paddingTop="5dp"
+                android:background="@drawable/etshape"
+                android:imeOptions="actionNext"
+                android:textSize="14dp"
+                android:paddingLeft="8dp"
+                android:visibility="gone"
+                android:scrollbars="vertical"
+                android:hint="Enter Complaint Type"
+                android:textColor="@android:color/black" />
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -338,7 +353,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="School Address"
+                    android:text="School Address *"
                     android:gravity="center_vertical"
                     android:textColor="@color/greencolor"
                     android:textSize="12sp"

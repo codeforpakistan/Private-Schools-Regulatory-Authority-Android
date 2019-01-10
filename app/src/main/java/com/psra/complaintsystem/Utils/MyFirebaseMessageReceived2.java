@@ -16,8 +16,8 @@ public class MyFirebaseMessageReceived2 extends FirebaseMessagingService {
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-
-
+        Log.e("working", "yes");
+        Log.e("data", remoteMessage.getData().toString());
         //you can get your text message here.
         JSONObject json = null;
         try {
