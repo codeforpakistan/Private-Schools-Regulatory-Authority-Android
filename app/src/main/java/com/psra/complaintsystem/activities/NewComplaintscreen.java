@@ -139,6 +139,9 @@ public class NewComplaintscreen extends AppCompatActivity implements EasyPermiss
     ProgressDialog dialog;
    // Button bt_submitbt;
    LinearLayout linerLayout;
+
+   EditText et_complaint_other;
+   String et_complaint_other_str;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -163,6 +166,8 @@ public class NewComplaintscreen extends AppCompatActivity implements EasyPermiss
         schoolAddress.setFocusable(false);
         schoolAddress.setFocusableInTouchMode(true);
         schoolAddress.setFocusable(true);
+
+        et_complaint_other = findViewById(R.id.et_complaint_other);
 
         complaintDetail = findViewById(R.id.et_complaint_detail);
         complaintDetail.setFocusableInTouchMode(false);
@@ -526,6 +531,7 @@ public class NewComplaintscreen extends AppCompatActivity implements EasyPermiss
          detailData=complaintDetail.getText().toString();
 
          school_address_data=tv_school_address.getText().toString();
+        et_complaint_other_str = et_complaint_other.getText().toString();
         if (TextUtils.isEmpty(distcatId)) {
             complaint_spinner.setError("Select District");
             complaint_spinner.requestFocus();
@@ -535,12 +541,12 @@ public class NewComplaintscreen extends AppCompatActivity implements EasyPermiss
             sub_complaint_spinner.requestFocus();
         }
 
-     /*   else if (TextUtils.isEmpty(ucCatId))
+        else if (TextUtils.isEmpty(et_complaint_other_str))
         {
 
-            uc_complaint_spinner.setError("Select UC");
-            uc_complaint_spinner.requestFocus();
-        }*/
+            et_complaint_other.setError("Enter Complaint Type");
+            et_complaint_other.requestFocus();
+        }
         /*   else if (TextUtils.isEmpty(schoolCatId))
         {
 
@@ -611,13 +617,23 @@ public class NewComplaintscreen extends AppCompatActivity implements EasyPermiss
                 .addConverterFactory(MoshiConverterFactory.create())
                 .build();
 
+
+
+        RequestBody complaintdetail;
+        if (!TextUtils.isEmpty(et_complaint_other_str)){
+            complaintdetail = RequestBody.create(MediaType.parse("text/plain"), et_complaint_other_str+": "+detailData);
+        }else {
+            complaintdetail = RequestBody.create(MediaType.parse("text/plain"), detailData);
+
+        }
         RequestBody complain_type_id = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(typeCatId));
         RequestBody user_id = RequestBody.create(MediaType.parse("text/plain"), userId);
         RequestBody school_id = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(schoolCatId));
         RequestBody district_id = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(distcatId));
         RequestBody schooladdress = RequestBody.create(MediaType.parse("text/plain"), schooladdrssData);
-        RequestBody complaintdetail = RequestBody.create(MediaType.parse("text/plain"), detailData);
+       // RequestBody complaintdetail = RequestBody.create(MediaType.parse("text/plain"), detailData);
         RequestBody complaintschooldata = RequestBody.create(MediaType.parse("text/plain"), school_address_data);
+
 
         Log.e("check", "uploadFile: " + schoolCatId + " " + userId + " " + typeCatId + " " + distcatId + " " + schoolAddress.getText().toString() + "" + complaintDetail.getText().toString());
 
@@ -1214,14 +1230,15 @@ public class NewComplaintscreen extends AppCompatActivity implements EasyPermiss
                         typeCatId = arrayList.get(i).getComplainTypeId();
                         typeCatName = arrayList.get(i).getComplainTypeTitle();
 
-                        if (!typeCatId.equals("")) {
-                            //create part and put in hasmap
-                            // sub_complaint_spinner.setText("");
-                            //mMap.put("vechicle_make", createPartFromString(subCatId));
-                            Log.e("schoolCatId", typeCatId);
-                            Log.e("schoolCatName", typeCatName);
-                        } else {
+                        if(typeCatName.equalsIgnoreCase("Other")) {
+                            // Toast.makeText(NewComplaintscreen.this, "click", Toast.LENGTH_SHORT).show();
+                            et_complaint_other.setVisibility(View.VISIBLE);
+                            et_complaint_other.requestFocus();
 
+                        }
+                        else
+                        {
+                            et_complaint_other.setVisibility(View.GONE);
                         }
 
                     }
