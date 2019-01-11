@@ -30,6 +30,8 @@ public class ComplainsList {
     private String schoolId;
     @Json(name = "schoolName")
     private String schoolName;
+    @Json(name = "schoolOthers")
+    private String schoolOtherName;
     @Json(name = "status_id")
     private String statusId;
     @Json(name = "statusTitle")
@@ -46,6 +48,14 @@ public class ComplainsList {
     private String userId;
     @Json(name = "show")
     private Integer show;
+
+    public String getSchoolOtherName() {
+        return schoolOtherName;
+    }
+
+    public void setSchoolOtherName(String schoolOtherName) {
+        this.schoolOtherName = schoolOtherName;
+    }
 
     public String getComplainId() {
         return complainId;
@@ -169,6 +179,7 @@ public class ComplainsList {
                 ", complainDetail='" + complainDetail + '\'' +
                 ", schoolId='" + schoolId + '\'' +
                 ", schoolName='" + schoolName + '\'' +
+                ", schoolOtherName='" + schoolOtherName + '\'' +
                 ", statusId='" + statusId + '\'' +
                 ", statusTitle='" + statusTitle + '\'' +
                 ", dated='" + dated + '\'' +

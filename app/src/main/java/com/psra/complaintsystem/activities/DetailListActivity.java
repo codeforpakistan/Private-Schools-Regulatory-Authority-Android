@@ -85,10 +85,20 @@ public class DetailListActivity extends AppCompatActivity {
                    complaintId = bundle.getString("complaintId");
                    show=bundle.getInt("show_status");
                    complaintDetail=bundle.getString("complaintDetail");
+
+                   Log.e("show", String.valueOf(show));
                }
 
         tv_statustitle.setText(statustitle);
-        tv_complainTypeTitle.setText(complainTypeTitle);
+        String[] parts = complaintDetail.split(":");
+        String first = parts[0];
+        if (first == null){
+            tv_complainTypeTitle.setText(complainTypeTitle);
+        }else {
+
+            tv_complainTypeTitle.setText(complainTypeTitle + ": "+first);
+        }
+
         tv_distric.setText(distric);
         tv_complaintagainst.setText(complaintagainst);
         tv_complaint_detail.setText(complaintDetail);
