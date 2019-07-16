@@ -635,7 +635,9 @@ public class NewComplaintscreen extends AppCompatActivity implements EasyPermiss
         RequestBody complaintschooldata = RequestBody.create(MediaType.parse("text/plain"), school_address_data);
 
 
-        Log.e("check", "uploadFile: " + schoolCatId + " " + userId + " " + typeCatId + " " + distcatId + " " + schoolAddress.getText().toString() + "" + complaintDetail.getText().toString());
+
+
+        //Log.e("check", "uploadFile: " + schoolCatId + " " + userId + " " + typeCatId + " " + distcatId + " " + schoolAddress.getText().toString() + "" + complaintDetail.getText().toString());
 
         map.put("complain_type_id", complain_type_id);
         map.put("user_id", user_id);
@@ -646,6 +648,7 @@ public class NewComplaintscreen extends AppCompatActivity implements EasyPermiss
         map.put("schoolOthers", complaintschooldata);
 
         Log.e("response", "uploadFile: " + map.toString());
+        Log.e("schooladdrssData", schooladdrssData);
 
         Log.e("check", "uploadFile: " + complain_type_id + " " + user_id + " " + district_id + " " + school_id + " " + complaintdetail);
 

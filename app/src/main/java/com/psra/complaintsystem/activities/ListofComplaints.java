@@ -215,7 +215,13 @@ public class ListofComplaints extends AppCompatActivity {
                 intent.putExtra("statustitle", statustitle);
                 intent.putExtra("complainTypeTitle", complainTypeTitle);
                 intent.putExtra("distric", distric);
-                intent.putExtra("complaintagainst", complaintagainst);
+                if (complaintagainst== null){
+                    intent.putExtra("complaintagainst", complainsList.getSchoolOtherName());
+                }else {
+                    intent.putExtra("complaintagainst", complaintagainst);
+
+                }
+
                 intent.putExtra("complaintId",compliantId);
                 intent.putExtra("show_status",show_feedback);
                 intent.putExtra("complaintDetail",complaintDetail);
